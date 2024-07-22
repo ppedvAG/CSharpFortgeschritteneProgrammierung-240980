@@ -3,8 +3,6 @@ Kurs Repository zu Kurs C# Fortgeschrittene Programmierung der ppedv AG. Trainer
 ## M000 | GETTING STARTED
 - [ ] Intro
 
-# Tag 1
-
 ## M001 | Entwicklung der C# Sprache 7.0 -> C# 9.0
 
 - [ ] C# 7.0 - C# 7.3
@@ -32,10 +30,6 @@ Kurs Repository zu Kurs C# Fortgeschrittene Programmierung der ppedv AG. Trainer
 - [ ] Anwendung von Generics
 - [ ] Constraints
 
-
-
-# Tag 2
-
 ## M005 | Serialisierung
 
 - [ ] Intro Serialisierung
@@ -62,16 +56,11 @@ Kurs Repository zu Kurs C# Fortgeschrittene Programmierung der ppedv AG. Trainer
 - [ ] Auf mehrere Tasks warten
 - [ ] Tasks verketten
 
-
-# Tag 3
-
 ## M008 | TPL Async/Await
 
 - [ ] Intro Async/Await Pattern
 - [ ] Async/Await vs Tasks
 - [ ] Async/Await in Verbindung mit WPF
-
-
 
 ## M009 | Reflection
 
