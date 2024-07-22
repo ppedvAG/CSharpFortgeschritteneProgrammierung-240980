@@ -12,9 +12,6 @@
             Console.WriteLine("\nLocalFunctionSample()");
             LocalFunctionSample();
 
-            Console.WriteLine("\nGenericConstraintSample");
-            GenericConstraintSample();
-
             // Wir koennen hier auf Color zugreifen weil das using aus Usings.cs kommt
             Console.WriteLine($"\n My favorite color is {Color.Green}");
         }
@@ -95,45 +92,6 @@
                     var (current, previous) = FibonacciRecursive(i - 1);
                     return (current + previous, current);
                 }
-            }
-        }
-
-        private static void GenericConstraintSample()
-        {
-            // Problemstellung: Wenn wir sehr viele Interfaces verwenden, weil wir bestimmte Auspraegungen haben wollen,
-            // kann es sehr schnell unuebersichtlich werden (Interface-"Wald")
-            // Loesung sind constraints fuer genersiche Klassen
-            var superInstance = new MyClassWithASuperInterace();
-
-            var simpleInstanceWithMultipleInterfaces = new MyClassForTheGenericContraintSample();
-
-            // Alter Ansatz: Ein Superinterface was mehrere Methoden besitzt.
-            void DoSomething(ISuperInterace instance)
-            {
-                instance.Cook();
-                instance.Eat();
-            }
-
-            // Besserer Ansatz: Ein Interface mit Constraints fuer die Interfaces welche ich haben moechte
-            void DoSomethingBetter<T>(T instance) where T : IEatable, ICookable
-            {
-                //var newInstance = new T(); // Geht nicht
-
-                // das war die alternative welche aber nicht typsicher ist
-                // hier koennen viele Arten von Exception fliegen
-                var newInstance = (T)Activator.CreateInstance(typeof(T));
-
-                instance.Cook();
-                instance.Eat();
-            }
-
-            // Besserer Ansatz: Ein Interface mit Constraints fuer die Interfaces welche ich haben moechte
-            void DoSomethingWithDefaultConstructor<T>(T instance) where T : IEatable, ICookable, new()
-            {
-                var newInstance = new T(); // New contraint erlaubt uns eine Instanz zu erstellen.
-
-                instance.Cook();
-                instance.Eat();
             }
         }
     }
