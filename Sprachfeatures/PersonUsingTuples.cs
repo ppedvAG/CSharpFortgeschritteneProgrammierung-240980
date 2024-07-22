@@ -2,7 +2,7 @@
 {
     public class PersonUsingTuples
     {
-        public string Vorname { get; set; }
+        public string Vorname { get; init; }
 
         public string ZweiterName { get; set; }
 

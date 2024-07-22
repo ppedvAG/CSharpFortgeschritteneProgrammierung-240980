@@ -14,6 +14,9 @@
 
             Console.WriteLine("\nGenericConstraintSample");
             GenericConstraintSample();
+
+            // Wir koennen hier auf Color zugreifen weil das using aus Usings.cs kommt
+            Console.WriteLine($"\n My favorite color is {Color.Green}");
         }
 
         private static void TuplesSample()
@@ -24,6 +27,7 @@
                 Nachname = "Mustermann",
                 ZweiterName = "Moritz"
             };
+            //max.Vorname = "Max"; // weil init erlaubt nur einmalige Zuweisung
 
             // Wurde frueher so gemacht und wirklich schlecht lesbar! Was soll Item 1 sein?
             var tuples = max.VollerNameMitPrehistoricTuples();
@@ -101,53 +105,36 @@
             // Loesung sind constraints fuer genersiche Klassen
             var superInstance = new MyClassWithASuperInterace();
 
-            var simpleInstanceWithMultipleInterfaces = new MyUltimateClass();
+            var simpleInstanceWithMultipleInterfaces = new MyClassForTheGenericContraintSample();
 
+            // Alter Ansatz: Ein Superinterface was mehrere Methoden besitzt.
             void DoSomething(ISuperInterace instance)
             {
                 instance.Cook();
+                instance.Eat();
+            }
+
+            // Besserer Ansatz: Ein Interface mit Constraints fuer die Interfaces welche ich haben moechte
+            void DoSomethingBetter<T>(T instance) where T : IEatable, ICookable
+            {
+                //var newInstance = new T(); // Geht nicht
+
+                // das war die alternative welche aber nicht typsicher ist
+                // hier koennen viele Arten von Exception fliegen
+                var newInstance = (T)Activator.CreateInstance(typeof(T));
+
+                instance.Cook();
+                instance.Eat();
+            }
+
+            // Besserer Ansatz: Ein Interface mit Constraints fuer die Interfaces welche ich haben moechte
+            void DoSomethingWithDefaultConstructor<T>(T instance) where T : IEatable, ICookable, new()
+            {
+                var newInstance = new T(); // New contraint erlaubt uns eine Instanz zu erstellen.
+
+                instance.Cook();
+                instance.Eat();
             }
         }
-    }
-
-    public class MyClassWithASuperInterace : ISuperInterace
-    {
-        public void Cook()
-        {
-            Console.WriteLine();
-        }
-
-        public void Eat()
-        {
-            throw new NotImplementedException();
-        }
-    }
-
-    public class MyUltimateClass : IEatable, ICookable
-    {
-        public void Cook()
-        {
-            throw new NotImplementedException();
-        }
-
-        public void Eat()
-        {
-            throw new NotImplementedException();
-        }
-    }
-
-    public interface ISuperInterace : IEatable, ICookable
-    {
-
-    }
-
-    public interface IEatable
-    {
-        void Eat();
-    }
-
-    public interface ICookable
-    {
-        void Cook();
     }
 }
