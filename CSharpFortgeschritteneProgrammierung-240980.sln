@@ -37,7 +37,7 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Multitasking", "Multitaskin
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Lab_Konto", "Lab_Konto\Lab_Konto.csproj", "{259E0302-77DF-4B5B-84C3-00549E83DF53}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Lab_Imageviewer", "Lab_Imageviewer\Lab_Imageviewer.csproj", "{1988CDBE-EB1B-4F94-B0FC-A715E6B2731F}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Lab_Images", "Lab_Imageviewer\Lab_Images.csproj", "{1988CDBE-EB1B-4F94-B0FC-A715E6B2731F}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
