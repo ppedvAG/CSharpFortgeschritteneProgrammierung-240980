@@ -4,11 +4,11 @@ namespace Lab_Images;
 
 public class Program
 {
-    private const string BASE_PATH = "D:\\";
-    private const int DEFAULT_WORKER_COUNT = 4;
+	private const string BASE_PATH = "D:\\";
+	private const int DEFAULT_WORKER_COUNT = 4;
 
-    private static List<Scanner> Scanners = new();
-    private static List<Worker> Workers = new();
+	private static List<Scanner> Scanners = new();
+	private static List<Worker> Workers = new();
 
 	private static bool ProcessRunning = false;
 
@@ -18,7 +18,11 @@ public class Program
 
 	private static bool SuspendRefresh = false;
 
-	private static readonly Dictionary<ConsoleKey, Action> Inputs = new()
+    /// <summary>
+    /// Dictionary fuer die Eingaben; 
+	/// Alternativ wuerde es auch ein Switch-Case tun was zur Compilezeit statt zur Laufzeit ausgewertet wird
+    /// </summary>
+    private static readonly Dictionary<ConsoleKey, Action> Inputs = new()
 	{
 		{ ConsoleKey.D1, CreateScanner },
 		{ ConsoleKey.D2, AdjustWorkerAmount },
@@ -51,6 +55,7 @@ public class Program
 			#endregion
 		}
 
+		// local function
 		void ProcessInput(Action a, bool suspend = false)
 		{
 			SuspendRefresh = suspend;
@@ -91,7 +96,10 @@ public class Program
 		Console.WriteLine($"Letzte Meldung: {LastOutput}");
 	}
 
-	private static void CreateOutputTask()
+    /// <summary>
+    /// Hier wird die Oberflaeche in einem eigenen Thread gezeichnet
+    /// </summary>
+    private static void CreateOutputTask()
 	{
 		Task.Run(() =>
 		{
