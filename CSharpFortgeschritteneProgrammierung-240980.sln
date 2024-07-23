@@ -35,6 +35,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Thread_Sync", "Thread_Sync\
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Multitasking", "Multitasking\Multitasking.csproj", "{F38D7E95-1F88-41F9-87A5-9D0A75132AD9}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Lab_Konto", "Lab_Konto\Lab_Konto.csproj", "{259E0302-77DF-4B5B-84C3-00549E83DF53}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -77,6 +79,10 @@ Global
 		{F38D7E95-1F88-41F9-87A5-9D0A75132AD9}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{F38D7E95-1F88-41F9-87A5-9D0A75132AD9}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{F38D7E95-1F88-41F9-87A5-9D0A75132AD9}.Release|Any CPU.Build.0 = Release|Any CPU
+		{259E0302-77DF-4B5B-84C3-00549E83DF53}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{259E0302-77DF-4B5B-84C3-00549E83DF53}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{259E0302-77DF-4B5B-84C3-00549E83DF53}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{259E0302-77DF-4B5B-84C3-00549E83DF53}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -91,6 +97,7 @@ Global
 		{04752B03-2213-4686-AE93-20B66E91F0C8} = {F0F36623-2EE9-4C3C-AB36-AE1333360DB1}
 		{219ADC52-357F-44CA-B606-B0E7350E7340} = {465F777C-B0C9-4DF1-A5B8-57ECD0D15A48}
 		{F38D7E95-1F88-41F9-87A5-9D0A75132AD9} = {465F777C-B0C9-4DF1-A5B8-57ECD0D15A48}
+		{259E0302-77DF-4B5B-84C3-00549E83DF53} = {465F777C-B0C9-4DF1-A5B8-57ECD0D15A48}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {697E6E9C-5CD4-4230-9DAB-F8B3AA5A1A41}
