@@ -43,6 +43,10 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AsyncAwaitWpfApp", "AsyncAw
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AsyncAwait", "AsyncAwait\AsyncAwait.csproj", "{31B13F53-3581-4513-A695-92274CBE0A12}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "M005_Serialisierung", "M005_Serialisierung", "{BC3BD84D-8E05-4D6E-B038-B2A83DD99F55}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Serialization", "Serialization\Serialization.csproj", "{172566CD-8C69-41DE-8A8F-22462F7F6BBD}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -101,6 +105,10 @@ Global
 		{31B13F53-3581-4513-A695-92274CBE0A12}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{31B13F53-3581-4513-A695-92274CBE0A12}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{31B13F53-3581-4513-A695-92274CBE0A12}.Release|Any CPU.Build.0 = Release|Any CPU
+		{172566CD-8C69-41DE-8A8F-22462F7F6BBD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{172566CD-8C69-41DE-8A8F-22462F7F6BBD}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{172566CD-8C69-41DE-8A8F-22462F7F6BBD}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{172566CD-8C69-41DE-8A8F-22462F7F6BBD}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -119,6 +127,7 @@ Global
 		{1988CDBE-EB1B-4F94-B0FC-A715E6B2731F} = {DF02D197-5F15-42BF-89D3-AE8730D7DA7B}
 		{4280306F-569D-456D-B61D-8AF10B6BF5D4} = {49BD4736-D2F1-4756-9B6C-8452B2D53C86}
 		{31B13F53-3581-4513-A695-92274CBE0A12} = {49BD4736-D2F1-4756-9B6C-8452B2D53C86}
+		{172566CD-8C69-41DE-8A8F-22462F7F6BBD} = {BC3BD84D-8E05-4D6E-B038-B2A83DD99F55}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {697E6E9C-5CD4-4230-9DAB-F8B3AA5A1A41}
