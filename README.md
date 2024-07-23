@@ -1,34 +1,34 @@
 Kurs Repository zu Kurs C# Fortgeschrittene Programmierung der ppedv AG. Trainer: Ortwin Carstocea (ortwinc@ppedv.de). 
 
 ## M000 | GETTING STARTED
-- [ ] Intro
+- [x] Intro
 
 ## M001 | Entwicklung der C# Sprache 7.0 -> C# 9.0
 
-- [ ] C# 7.0 - C# 7.3
-- [ ] C# 8.0
-- [ ] C# 9.0
+- [x] C# 7.0 - C# 7.3
+- [x] C# 8.0
+- [x] C# 9.0
 
 
 ## M002 | C# 10 bis C# 11
 
-- [ ] C# 10
-- [ ] C# 11
+- [x] C# 10
+- [x] C# 11
 
 
 ## M003 | Delegates und Events
 
-- [ ] Delegate
-- [ ] Action, Predicate, Func
-- [ ] Events
-- [ ] Komponente mit Events
+- [x] Delegate
+- [x] Action, Predicate, Func
+- [x] Events
+- [x] Komponente mit Events
 
 
 ## M004 | Generics
 
-- [ ] Generics Intro
-- [ ] Anwendung von Generics
-- [ ] Constraints
+- [x] Generics Intro
+- [x] Anwendung von Generics
+- [x] Constraints
 
 ## M005 | Serialisierung
 
@@ -39,12 +39,12 @@ Kurs Repository zu Kurs C# Fortgeschrittene Programmierung der ppedv AG. Trainer
 
 ## M006 | Multithreading
 
-- [ ] Intro Threading
-- [ ] Thread starten/stoppen
-- [ ] Thread mit Parameter
-- [ ] Threadpool
-- [ ] Lock
-- [ ] Mutex, Interlocked, ConcurrentCollection
+- [x] Intro Threading
+- [x] Thread starten/stoppen
+- [x] Thread mit Parameter
+- [x] Threadpool
+- [x] Lock
+- [x] Mutex, Interlocked, ConcurrentCollection
 
 ## M007 | TPL
 
