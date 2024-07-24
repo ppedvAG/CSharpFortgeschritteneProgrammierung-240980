@@ -17,11 +17,12 @@ namespace TestProject.UnitsUnderTest
             _vehicleService = vehicleService;
         }
 
-        public VehicleOrder CreateOrder(string customerName)
+        public VehicleOrder CreateOrder(string customerName, int maxDays = 30)
         {
             if (!string.IsNullOrEmpty(customerName))
             {
-                return new VehicleOrder(CurrentOrderId++, customerName);
+                var dueDate = DateTime.Now.AddDays(maxDays);
+                return new VehicleOrder(CurrentOrderId++, customerName, new DateTime(dueDate.Year, dueDate.Month, dueDate.Day));
             }
 
             return null;
@@ -38,5 +39,5 @@ namespace TestProject.UnitsUnderTest
         }
     }
 
-    public record VehicleOrder(int OrderId, string CustomerName);
+    public record VehicleOrder(int OrderId, string CustomerName, DateTime? DueDate);
 }

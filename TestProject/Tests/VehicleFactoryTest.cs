@@ -5,27 +5,39 @@ using TestProject.UnitsUnderTest;
 
 namespace TestProject.Tests
 {
+    public record OrderDataTestArg(string Name, int Days);
+
     [TestClass]
     public class VehicleFactoryTest
     {
         // Dieses Property wird vom Framework automatisch injiziert. Es muss exakt so heiﬂen und von diesem Typ sein.
         public TestContext TestContext { get; set; }
 
+        private static IEnumerable<object[]> CreateOrderParameters
+        {
+            get
+            {
+                yield return new object[] { new OrderDataTestArg("Max Mustermann", 10) };
+                yield return new object[] { new OrderDataTestArg("John Doe", 20) };
+            }
+        }
+
         [TestMethod]
-        [DataRow("Max Mustermann")]
-        [DataRow("John Doe")]
-        public void CreateOrder_ReturnsValidOrder(string expectedName)
+        [DynamicData(nameof(CreateOrderParameters), DynamicDataSourceType.Property)]
+        public void CreateOrder_ReturnsValidOrder(OrderDataTestArg order)
         {
             // Arrange
+            var expectedDate = DateTime.Now.AddDays(order.Days);
             var mockService = Mock.Of<IVehicleService>();
             var factory = new VehicleFactory(mockService);
 
             // Act
-            var result = factory.CreateOrder(expectedName);
+            var result = factory.CreateOrder(order.Name, order.Days);
 
             // Assert
             Assert.IsNotNull(result, "Expected a valid order record.");
-            Assert.AreEqual(expectedName, result.CustomerName);
+            Assert.AreEqual(order.Name, result.CustomerName);
+            Assert.AreEqual(expectedDate.Day, result.DueDate.Value.Day);
 
             ExportTestResults(result);
         }

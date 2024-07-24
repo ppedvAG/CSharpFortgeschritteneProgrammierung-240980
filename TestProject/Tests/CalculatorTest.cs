@@ -6,12 +6,13 @@ namespace TestProject.Tests
     public class CalculatorTest
     {
         [TestMethod]
-        public void Add_ReturnsSum()
+        [DataRow(1, 2, 3)]
+        [DataRow(2, 3, 5)]
+        [DataRow(3, 4, 7)]
+        [DataRow(4, 5, 9)]
+        public void Add_ReturnsSum(int expectedOparand1, int expectedOperand2, int expectedResult)
         {
             // Arrange
-            var expectedOparand1 = 1;
-            var expectedOperand2 = 2;
-            var expectedResult = 3;
             var calculator = new Calculator();
 
             // Act
