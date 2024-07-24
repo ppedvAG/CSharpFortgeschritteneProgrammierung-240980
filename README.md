@@ -82,8 +82,10 @@ Kurs Repository zu Kurs C# Fortgeschrittene Programmierung der ppedv AG. Trainer
 
 ## M011 | Sonstige Themen
 
+- [x] MSTest und Moq benutzen
 - [ ] Operatoren überladen
-- [ ] Enumerator
+- [x] Enumerator
+- [x] StringBuffer
 - [ ] Indexer
 - [ ] Anonyme Objekte
 - [ ] Timer
