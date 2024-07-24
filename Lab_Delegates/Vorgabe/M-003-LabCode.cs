@@ -1,6 +1,6 @@
 public class Program
 {
-	static void Main(string[] args)
+	static void MainSample(string[] args)
 	{
 		//Eigenen Code hier schreiben
 	}
