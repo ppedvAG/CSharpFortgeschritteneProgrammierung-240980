@@ -73,11 +73,11 @@ Kurs Repository zu Kurs C# Fortgeschrittene Programmierung der ppedv AG. Trainer
 
 ## M010 | Linq & Erweiterungsmethoden
 
-- [ ] Intro Linq
-- [ ] Einfaches Linq
-- [ ] Weitere Linq Funktionen
-- [ ] Komplexes Linq
-- [ ] Erweiterungsmethoden
+- [x] Intro Linq
+- [x] Einfaches Linq
+- [x] Weitere Linq Funktionen
+- [x] Komplexes Linq
+- [x] Erweiterungsmethoden
 
 
 ## M011 | Sonstige Themen
